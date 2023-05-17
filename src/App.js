@@ -3,19 +3,17 @@ import SearchTeam from './components/SearchTeam';
 import Result from './components/Result';
 import CombineButton from './components/CombineButton';
 import classes from './App.module.css';
+import Layout from './layout/Layout';
 import HeaderTitle from './components/HeaderTitle';
 
 function App() {
   return (
-    <div className={classes.screen}>
-      <HeaderTitle />
-      <div className={classes.layout}>
+    <Layout headerTitle={<HeaderTitle />}>
         <SearchPlayer />
         <SearchTeam />
         <CombineButton />
         <Result />
-      </div>
-    </div>
+    </Layout>
   );
 }
 

@@ -1,13 +1,7 @@
-.header {
-    background-color: #17408B;
-    padding: 16px;
-}
-
 .title {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-size: 28px;
-    line-height: 41px;
     color: #FFFFFF;
     font-weight: 700;
 }
