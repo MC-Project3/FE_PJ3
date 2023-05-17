@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBox from './SearchBox';
 
 // const data = [
@@ -15,16 +15,26 @@ import SearchBox from './SearchBox';
 //     name: 'Lebron Jamse'
 //   },
 // ]
+const PLAYER_API_ENDPOINT = "https://5w231plds1.execute-api.ca-central-1.amazonaws.com/2023-05-15/players";
 
 export default function Searchplayer(props) {
-  const [players, setPlayer] = useState([]);
-  const [userInput, setUserInput] = useState(''); //사용자 입력 값
+  const [players, setPlayer] = useState([]);      //선수 가져오기
+  //const [userInput, setUserInput] = useState(''); //사용자 입력 값
 
   const searchHandler = () => {
     console.log('in searchHandler')
   }
 
-  const searched = players.filter((item) => item.name.toLowerCase().includes(userInput));
+
+  useEffect(() => {
+    fetch(PLAYER_API_ENDPOINT)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setPlayer(res);
+      });
+  }, []);
+
   return <SearchBox title="선수" data={players} onSearch={searchHandler} />
 }
 

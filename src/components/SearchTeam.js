@@ -1,5 +1,10 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBox from './SearchBox';
+
+
+const PLAYER_API_ENDPOINT = "";
+
+
 export default function SearchTeam(props) {
 
   const [teams, setTeam] = useState([]);
@@ -9,6 +14,15 @@ export default function SearchTeam(props) {
     console.log('in searchHandler')
   }
 
-  const searched = teams.filter((item) => item.name.toLowerCase().includes(userInput));
+  useEffect(() => {
+    fetch(PLAYER_API_ENDPOINT)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setTeam(res);
+      });
+  }, []);
+
+  //const searched = teams.filter((item) => item.name.toLowerCase().includes(userInput));
   return <SearchBox title="팀" data={teams} onSearch={searchHandler} />
 }

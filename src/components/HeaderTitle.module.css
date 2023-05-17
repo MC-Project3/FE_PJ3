@@ -1,10 +1,6 @@
 .header {
-    width: 1230px;
-    height: 70px;
     background-color: #17408B;
     padding: 16px;
-    gap: 10px;
-    align-self: stretch;
 }
 
 .title {

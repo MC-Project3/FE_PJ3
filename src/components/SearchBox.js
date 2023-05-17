@@ -8,17 +8,19 @@ export default function SearchBox(props) {
         props.onSearch();
     }
 
+    console.log(props);
+
     return (
-        <div>
+        <div className={classes.container}>
             <h2>{props.title}</h2>
-            <div>
+            <div className={classes.layout}>
                 <input type="text" name="player" placeholder={`${props.title}명을 입력해주세요`} />
                 <button className={classes.search} onClick={searchButtonClickHandler} >검색</button>
             </div>
-            <div>
+            <div className={classes.cardList}>
                 {
                     props.data && props.data.map((item) =>
-                        <PhotoCard imageUrl={item.imageUrl} name={item.name} />
+                        <PhotoCard key={item.id} imageUrl={item.imageUrl} name={item.name} />
                     )
                 }
             </div>

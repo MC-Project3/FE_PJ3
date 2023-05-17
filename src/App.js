@@ -2,23 +2,17 @@ import SearchPlayer from './components/SearchPlayer';
 import SearchTeam from './components/SearchTeam';
 import Result from './components/Result';
 import CombineButton from './components/CombineButton';
-
+import classes from './App.module.css';
 import HeaderTitle from './components/HeaderTitle';
 
 function App() {
   return (
-    <div >
+    <div className={classes.screen}>
       <HeaderTitle />
-      <div style={{ float: 'left' }}>
+      <div className={classes.layout}>
         <SearchPlayer />
-      </div>
-      <div style={{ float: 'left' }}>
         <SearchTeam />
-      </div>
-      <div style={{ float: 'left' }}>
         <CombineButton />
-      </div>
-      <div style={{ float: 'left' }}>
         <Result />
       </div>
     </div>
