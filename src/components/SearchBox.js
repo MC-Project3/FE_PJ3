@@ -13,9 +13,9 @@ export default function SearchBox(props) {
     return (
         <div className={classes.container}>
             <h2>{props.title}</h2>
-            <div className={classes.layout}>
-                <input type="text" name="player" placeholder={`${props.title}명을 입력해주세요`} />
-                <button className={classes.search} onClick={searchButtonClickHandler} >검색</button>
+            <div className={classes.searchContainer}>
+                <input className={classes.searchInput} type="text" name="player" placeholder={`${props.title}명을 입력해주세요`} />
+                <button className={classes.searchButton} onClick={searchButtonClickHandler} >검색</button>
             </div>
             <div className={classes.cardList}>
                 {
