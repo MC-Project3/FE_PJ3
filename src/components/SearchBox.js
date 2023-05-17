@@ -17,12 +17,15 @@ export default function SearchBox(props) {
                 <input className={classes.searchInput} type="text" name="player" placeholder={`${props.title}명을 입력해주세요`} />
                 <button className={classes.searchButton} onClick={searchButtonClickHandler} >검색</button>
             </div>
-            <div className={classes.cardList}>
-                {
-                    props.data && props.data.map((item) =>
-                        <PhotoCard key={item.id} imageUrl={item.imageUrl} name={item.name} />
-                    )
-                }
+            <div className={classes.cardListContainer}>
+                <div className={classes.cardList}>
+                    {
+                        props.data && props.data.map((item) =>
+                            <PhotoCard key={item.id} imageUrl={item.imageUrl} name={item.name} />
+                        )
+                    }
+                </div>
+                <button className={classes.moreButton}>더보기</button>
             </div>
         </div>
     )
