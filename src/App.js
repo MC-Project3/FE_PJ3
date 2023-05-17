@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchPlayer from './components/SearchPlayer';
+import SearchTeam from './components/SearchTeam';
+import Result from './components/Result';
+import CombineButton from './components/CombineButton';
+
+import HeaderTitle from './components/HeaderTitle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <HeaderTitle />
+      <div style={{ float: 'left' }}>
+        <SearchPlayer />
+      </div>
+      <div style={{ float: 'left' }}>
+        <SearchTeam />
+      </div>
+      <div style={{ float: 'left' }}>
+        <CombineButton />
+      </div>
+      <div style={{ float: 'left' }}>
+        <Result />
+      </div>
     </div>
   );
 }

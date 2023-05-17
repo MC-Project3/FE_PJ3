@@ -1,0 +1,54 @@
+.searchTitle {
+    width: 30px;
+    height: 23px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    background: #17408B;
+    border-radius: 8px;
+    width: 62px;
+    height: 39px;
+    padding: 8px 16px;
+    gap: 10px;
+}
+
+.combine {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 10px;
+
+    width: 84px;
+    height: 57px;
+
+    background: #EEEEEE;
+    border-radius: 8px;
+}
+
+.combineTitle {
+    width: 52px;
+    height: 41px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+
+    color: #999999;
+
+}
