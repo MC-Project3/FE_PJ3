@@ -1,0 +1,17 @@
+.button {
+    font-size: 1.5rem;
+    height: 2em;
+    align-self: center;
+    border: none;
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    cursor: pointer;
+    outline: inherit;
+    color: #FFFFFF;
+    background-color: #17408B;
+}
+
+.button:disabled {
+    color: #999999;
+    background-color: #EEEEEE;
+}
